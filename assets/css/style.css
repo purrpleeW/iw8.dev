@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Arial Black", Arial, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 40%, #1a0000 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Optional background image */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../images/bg.jpg") center/cover no-repeat;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,0,0,0.15), transparent 70%);
+    z-index: 1;
+}
+
+.container {
+    text-align: center;
+    z-index: 2;
+}
+
+.title {
+    font-size: 4rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #bbb;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.status {
+    font-size: 1.5rem;
+    color: #ff2a2a;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.cta {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #ddd;
+    border: 1px solid #444;
+    padding: 15px 30px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cta:hover {
+    background: #ff2a2a;
+    color: black;
+    border-color: #ff2a2a;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #666;
+    letter-spacing: 1px;
+}
