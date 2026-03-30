@@ -1,29 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Lockout</title>
-
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IW8-Mod Docs - Home</title>
+  <meta name="description" content="Documentation and tutorials for the IW8-Mod Call of Duty modding project."/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="icon" type="image/png" href="/assets/images/iw8mod-icon.jpg"/>
 </head>
 <body>
+  <div class="site-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <a class="brand" href="/">
+          <img class="brand-mark brand-logo" src="assets/images/iw8mod-icon.jpg" alt="IW8-Mod logo"/>
+          <div>
+            <strong>IW8-Mod</strong>
+            <small>Docs & Tutorials</small>
+          </div>
+        </a>
 
-<div class="overlay"></div>
+        <nav class="sidebar-nav">
+          <div class="nav-group is-open">
+            <button class="nav-group-toggle" type="button" aria-expanded="true">
+              <span class="nav-label">Overview</span>
+              <span class="nav-chevron">⌄</span>
+            </button>
+            <div class="nav-group-links">
+              <a class="nav-link active" href="/">Home</a>
+              <a class="nav-link" href="/about/">About</a>
+              <a class="nav-link" href="/features/">Features</a>
+            </div>
+          </div>
 
-<div class="container">
-    <h1 class="title">IW8-Mod</h1>
-    <p class="subtitle">errr umm mmeowwwoww :3</p>
+          <div class="nav-group">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">
+              <span class="nav-label">Installation</span>
+              <span class="nav-chevron">⌄</span>
+            </button>
+            <div class="nav-group-links">
+              <a class="nav-link" href="/installation/manual/">Manual</a>
+              <a class="nav-link" href="/installation/zerolauncher/">Using ZeroLauncher</a>
+            </div>
+          </div>
 
-    <p class="status">wip, check back later</p>
+          <div class="nav-group">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">
+              <span class="nav-label">Guides</span>
+              <span class="nav-chevron">⌄</span>
+            </button>
+            <div class="nav-group-links">
+              <a class="nav-link" href="/scripting/">Scripting</a>
+              <a class="nav-link" href="/troubleshooting/">Troubleshooting</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </aside>
 
-    <div class="cta">soon</div>
-</div>
+    <div class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar">
+          ☰
+        </button>
 
-<footer class="footer">
-    iw8-mod
-</footer>
+        <div class="topbar-search">
+          <input type="text" placeholder="Search docs..." />
+        </div>
 
-<script src="assets/js/script.js"></script>
+        <div class="topbar-links">
+          <a href="about/">About</a>
+          <a href="https://discord.gg/WVSErUvBbj">Discord</a>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="hero">
+          <div class="hero-badge">Documentation & Tutorials</div>
+          <h1>IW8-Mod</h1>
+          <p>
+            Tutorials, setup guides, scripting help, and project documentation for
+            IW8-Mod.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-secondary" href="about/">Learn More</a>
+          </div>
+        </section>
+
+        <section class="grid-cards">
+
+        <a class="doc-card" href="features/">
+          <span class="card-kicker">Overview</span>
+          <h2>Features</h2>
+          <p>See what IW8-Mod supports, from offline play to LAN, GSC modding, and restored content.</p>
+        </a>
+
+        <a class="doc-card" href="installation/manual/">
+            <span class="card-kicker">Installation</span>
+            <h2>Manual</h2>
+            <p>Install IW8-Mod manually by downloading game files and setting up the mod yourself.</p>
+        </a>
+
+        <a class="doc-card" href="installation/zerolauncher/">
+            <span class="card-kicker">Installation</span>
+            <h2>Using ZeroLauncher</h2>
+            <p>Use ZeroLauncher for a simpler guided setup process.</p>
+        </a>
+
+        <a class="doc-card" href="guides/scripting/">
+            <span class="card-kicker">Guide</span>
+            <h2>Scripting</h2>
+            <p>Understand script structure, examples, and workflow.</p>
+        </a>
+
+        <a class="doc-card" href="guides/menus/">
+            <span class="card-kicker">Guide</span>
+            <h2>Menus</h2>
+            <p>Build and organize menu systems for custom features.</p>
+        </a>
+
+        <a class="doc-card" href="guides/troubleshooting/">
+            <span class="card-kicker">Support</span>
+            <h2>Troubleshooting</h2>
+            <p>Fix common setup, path, and launch issues.</p>
+        </a>
+        </section>
+
+        <section class="doc-section">
+            <br>
+            <br>
+          <h2>What this site is for?</h2>
+          <p>
+                This site hosts documentation for IW8-Mod, as well troubleshooting tips, credits, and more.
+          </p>
+
+          <div class="callout">
+            <strong>Important!</strong> Make sure you read our tutorials before asking for help in support chats!
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

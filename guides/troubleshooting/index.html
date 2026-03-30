@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IW8-Mod Docs - Troubleshooting</title>
+  <link rel="stylesheet" href="../../assets/css/style.css"/>
+  <link rel="icon" type="image/png" href="/assets/images/iw8mod-icon.jpg"/>
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <a class="brand" href="../../">
+          <img class="brand-mark brand-logo" src="../../assets/images/iw8mod-icon.jpg" alt="IW8-Mod logo"/>
+          <div>
+            <strong>IW8-Mod</strong>
+            <small>Docs & Tutorials</small>
+          </div>
+        </a>
+
+        <nav class="sidebar-nav">
+          <div class="nav-group">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">
+              <span class="nav-label">Overview</span>
+              <span class="nav-chevron">⌄</span>
+            </button>
+            <div class="nav-group-links">
+              <a class="nav-link" href="../../">Home</a>
+              <a class="nav-link" href="../../about/">About</a>
+              <a class="nav-link" href="../../features/">Features</a>
+            </div>
+          </div>
+
+          <div class="nav-group">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">
+              <span class="nav-label">Installation</span>
+              <span class="nav-chevron">⌄</span>
+            </button>
+            <div class="nav-group-links">
+              <a class="nav-link" href="../../installation/manual/">Manual</a>
+              <a class="nav-link" href="../../installation/zerolauncher/">Using ZeroLauncher</a>
+            </div>
+          </div>
+
+          <div class="nav-group is-open">
+            <button class="nav-group-toggle" type="button" aria-expanded="true">
+              <span class="nav-label">Guides</span>
+              <span class="nav-chevron">⌄</span>
+            </button>
+            <div class="nav-group-links">
+              <a class="nav-link" href="../scripting/">Scripting</a>
+              <a class="nav-link active" href="../troubleshooting/">Troubleshooting</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar">☰</button>
+        <div class="topbar-search">
+          <input type="text" placeholder="Search docs..." />
+        </div>
+      </header>
+
+      <main class="content doc-page">
+        <p class="breadcrumb"><a href="../../">Home</a> / Guides / Troubleshooting</p>
+
+        <h1>Troubleshooting</h1>
+        <p>
+          This page will cover common issues, their causes, and how to fix them, so read carefully.
+        </p>
+
+        <h2>Common Problems</h2>
+        <ul>
+          <li>The mod does not launch (Python closes, or launcher fails to launch the game)</li>
+          <li>Files are missing or corrupted</li>
+          <li>"Unable to initialize online services"</li>
+          <li>Error when entering a match (crash, dev error, or kick)</li>
+        </ul>
+
+        <h2>General Checks</h2>
+        <ol>
+          <li>Confirm you are using a supported game version.</li>
+          <li>Ensure your game folder is placed in a simple path (e.g. <code>C:\Games\ModernWarfare</code>).</li>
+          <li>Check that Python is installed (manual install only, not from Microsoft Store).</li>
+          <li>Read any error messages or console output carefully.</li>
+          <li>Ensure there are no faulty scripts in your scripts folder.</li>
+          <li>Confirm you are connected to the Radmin VPN network if required.</li>
+        </ol>
+
+        <h2>Launch Issues</h2>
+        <p><strong>Problem:</strong> Game does not launch</p>
+        <p><strong>Possible causes:</strong></p>
+        <ul>
+          <li>Invalid folder path (too long, special characters, or protected folders like Downloads or Desktop)</li>
+          <li>Corrupted cache or install</li>
+        </ul>
+
+        <p><strong>Fix:</strong></p>
+        <ol>
+          <li>Move the game to a simple directory (e.g. <code>C:\Games\ModernWarfare</code>)</li>
+          <li>Delete the <code>sigcache</code> folder inside the game directory (if it's there)</li>
+          <li>Reinstall the mod files (powrprof.dll and version.dll)</li>
+          <li>Reboot your PC, somtimes the simplest fixes work.</li>
+        </ol>
+
+        <h2>Missing DLL Errors</h2>
+        <p><strong>Cause:</strong> Missing or corrupted game files, or missing runtime libraries</p>
+        
+        <div class="doc-image-card">
+        <img class="doc-image" src="https://cdn.fsploit.xyz/images/missing-runtime-dll.png" alt="Example image of a missing dll."/>
+          <p class="doc-image-caption">Example image of a missing dll.</p>
+        </div>
+
+        <p><strong>Fix:</strong></p>
+        <ol>
+          <li>Reinstall your game files</li>
+          <li>Install necessary runtimes</li>
+          <li>Add an exclusion in your antivirus to prevent mod file deletion</li>
+        </ol>
+
+        <h2>Missing .FF / .FP Files (Dev Error 6164 or Disk Read Error)</h2>
+        <p><strong>Cause:</strong> Corrupted or incomplete game files</p>
+
+        <p><strong>Fix:</strong></p>
+        <ol>
+          <li>Delete your current game files</li>
+          <li>Reinstall them completely</li>
+          <li>Use <strong>7-Zip</strong> or <strong>WinRAR</strong> for extraction (avoid Windows extractor)</li>
+        </ol>
+
+        <h2>Incorrect DLL Error</h2>
+        <p><strong>Cause:</strong> Unsupported or tampered game version</p>
+
+        <p><strong>Fix:</strong></p>
+        <ul>
+          <li>Use only supported builds listed in the features tab</li>
+          <li>Do not use pre-modified or pre-cracked versions</li>
+        </ul>
+
+        <h2>Other Missing File Errors (eg. Error 6345)</h2>
+        <p><strong>Cause:</strong> Files removed or blocked (usually antivirus deleting files)</p>
+
+        <p><strong>Fix:</strong></p>
+        <ol>
+          <li>Add a folder exclusion in your antivirus</li>
+          <li>Reinstall the game files</li>
+          <li>Make sure all the files are present</li>
+        </ol>
+
+        <h2>Launcher and Download Issues</h2>
+
+        <p><strong>Error fetching JSON</strong></p>
+        <ul>
+          <li>Cause: Server traffic is too high</li>
+          <li>Fix: Try again later</li>
+        </ul>
+
+        <p><strong>Download button not visible</strong></p>
+        <ul>
+          <li>Wait until the launcher shows <code>Initialised file sizes from CDN</code></li>
+          <li>Wait another minute before starting the download</li>
+        </ul>
+
+        <p><strong>General download issues</strong></p>
+        <ul>
+          <li>Try a different browser</li>
+          <li>Use a download manager (eg. JDownloader 2 or Free Download Manager)</li>
+          <li>If it persists, it may just be your connection or device</li>
+        </ul>
+
+        <h2>Game-Specific Issues</h2>
+
+        <p><strong>Dev Error 907</strong></p>
+        <ul>
+          <li>Cause: Editing Warzone match settings</li>
+          <li>Fix: Restart the game and avoid modifying those settings</li>
+        </ul>
+        <div class="doc-image-card">
+        <img class="doc-image" src="https://cdn.fsploit.xyz/images/dev-error-907.png" alt="Example image of DEV ERROR 907"/>
+          <p class="doc-image-caption">Example image of DEV ERROR 907.</p>
+        </div>
+
+        <p><strong>Unable to initialize online services (PATCH 3 PLAYTEST ONLY!)</strong></p>
+        <ul>
+          <li>Ensure you are connected to the Radmin VPN network.</li>
+        </ul>
+
+        <h2>Uninstalling the Mod</h2>
+        <ol>
+          <li>Delete all game-related files, the DLL files, as well as anything located in Documents.</li>
+          <li>Reboot your PC</li>
+        </ol>
+
+        <div class="callout">
+          <strong>Tip:</strong> Most issues are caused by incorrect file placement, missing files, or unsupported versions.
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>
