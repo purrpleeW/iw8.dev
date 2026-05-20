@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IW8-Mod Docs - Custom Camos Guide</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="icon" type="image/png" href="../../assets/images/iw8mod-icon.jpg" />
+</head>
+
+<body>
+  <div class="site-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <a class="brand" href="../../">
+          <img class="brand-mark brand-logo" src="../../assets/images/iw8mod-icon.jpg" alt="IW8-Mod logo" />
+          <div>
+            <strong>IW8-Mod</strong>
+            <small>Docs & Tutorials</small>
+          </div>
+        </a>
+
+        <nav class="sidebar-nav">
+          <div class="nav-group">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">
+              <span class="nav-label">Overview</span>
+              <span class="nav-chevron">⌄</span>
+            </button>
+            <div class="nav-group-links">
+              <a class="nav-link" href="../../">Home</a>
+              <a class="nav-link" href="../../about/">About</a>
+              <a class="nav-link" href="../../features/">Features</a>
+            </div>
+          </div>
+
+          <div class="nav-group">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">
+              <span class="nav-label">Installation</span>
+              <span class="nav-chevron">⌄</span>
+            </button>
+            <div class="nav-group-links">
+              <a class="nav-link" href="../../installation/manual/">Manual</a>
+              <a class="nav-link" href="../../installation/zerolauncher/">Using ZeroLauncher</a>
+            </div>
+          </div>
+
+          <div class="nav-group is-open">
+            <button class="nav-group-toggle" type="button" aria-expanded="true">
+              <span class="nav-label">Guides</span>
+              <span class="nav-chevron">⌄</span>
+            </button>
+            <div class="nav-group-links">
+              <a class="nav-link" href="../../guides/scripting/">Scripting</a>
+              <a class="nav-link active" href="../../guides/customization/">Custom Camos</a>
+              <a class="nav-link" href="../../guides/troubleshooting/">Troubleshooting</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar">☰</button>
+        <div class="topbar-search">
+          <input type="text" placeholder="Search docs..." />
+        </div>
+        <div class="topbar-links">
+          <a href="../../about/">About</a>
+          <a href="https://discord.gg/WVSErUvBbj">Discord</a>
+        </div>
+      </header>
+
+      <main class="content doc-page">
+        <p class="breadcrumb"><a href="../../">Home</a> / Guides / Custom Camos</p>
+
+        <h1>Custom Camos</h1>
+
+        <p><strong>Supported media formats:</strong> PNG, JPEG and GIF</p>
+
+        <p>You can use <strong><code>images_reload</code></strong> to update camos, properties, and animations
+          without restarting the game.</p>
+
+        <h3>Layer naming [N as in the layer index, 0-1-2]:</h3>
+        <ul>
+          <li><code>layerN_color</code></li>
+          <li><code>layerN_normal</code></li>
+          <li><code>layerN_gray</code></li>
+          <li><code>icon</code> (swaps the camo icon)</li>
+        </ul>
+
+        <div class="file-tree">
+          <div class="file-tree-title">Dir Example</div>
+          <div class="file-tree-node folder">
+            <svg class="file-icon" viewBox="0 0 24 24" width="16" height="16">
+              <path d="M10 4H4c-1.11 0-2 .89-2 2v12c0 1.09.89 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"
+                fill="#ffb020" />
+            </svg>
+            <span class="node-name">assets/camo/camo_02a/</span>
+          </div>
+          <div class="file-tree-children">
+            <div class="file-tree-node file">
+              <svg class="file-icon" viewBox="0 0 24 24" width="16" height="16">
+                <path
+                  d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
+                  fill="#4d94ff" />
+              </svg>
+              <span class="node-name">properties.json</span>
+            </div>
+            <div class="file-tree-node file">
+              <svg class="file-icon" viewBox="0 0 24 24" width="16" height="16">
+                <path
+                  d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
+                  fill="#4d94ff" />
+              </svg>
+              <span class="node-name">animation.json</span>
+            </div>
+            <div class="file-tree-node file">
+              <svg class="file-icon" viewBox="0 0 24 24" width="16" height="16">
+                <path
+                  d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                  fill="#bf5af2" />
+              </svg>
+              <span class="node-name">icon.png</span>
+            </div>
+            <div class="file-tree-node file">
+              <svg class="file-icon" viewBox="0 0 24 24" width="16" height="16">
+                <path
+                  d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                  fill="#bf5af2" />
+              </svg>
+              <span class="node-name">layer0_color.gif</span>
+            </div>
+            <div class="file-tree-node file">
+              <svg class="file-icon" viewBox="0 0 24 24" width="16" height="16">
+                <path
+                  d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                  fill="#bf5af2" />
+              </svg>
+              <span class="node-name">layer0_normal.jpg</span>
+            </div>
+            <div class="file-tree-node file">
+              <svg class="file-icon" viewBox="0 0 24 24" width="16" height="16">
+                <path
+                  d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                  fill="#bf5af2" />
+              </svg>
+              <span class="node-name">layer1_color.png</span>
+            </div>
+            <div class="file-tree-node file">
+              <svg class="file-icon" viewBox="0 0 24 24" width="16" height="16">
+                <path
+                  d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                  fill="#bf5af2" />
+              </svg>
+              <span class="node-name">layer1_gray.gif</span>
+            </div>
+            <div class="file-tree-node file">
+              <svg class="file-icon" viewBox="0 0 24 24" width="16" height="16">
+                <path
+                  d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                  fill="#bf5af2" />
+              </svg>
+              <span class="node-name">layer1_normal.jpg</span>
+            </div>
+            <div class="file-tree-node file">
+              <svg class="file-icon" viewBox="0 0 24 24" width="16" height="16">
+                <path
+                  d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                  fill="#bf5af2" />
+              </svg>
+              <span class="node-name">layer2_gray.png</span>
+            </div>
+          </div>
+        </div>
+
+        <h3>Properties:</h3>
+        <ul>
+          <li><strong>name</strong>: changes ingame localized name of the camo</li>
+          <li><strong>blend_map_channels</strong>: changes camo coverage and blending, obsidian uses 7</li>
+          <li><strong>level0, level1, level2</strong>: config each individual camo layer</li>
+          <li><strong>color_tint</strong>: ARGB color tint</li>
+          <li><strong>albedo_map_scale_bias</strong>: reflection</li>
+          <li><strong>normal_map_scale_bias</strong>: depth/glossiness</li>
+          <li><strong>uv_scale</strong>: X-Y scale applied to the camo "grid"</li>
+        </ul>
+
+        <h4>Preset:</h4>
+        <div class="code-wrapper">
+          <pre><code>{
+  "name": "placeHolder Example idk",
+  "blend_map_channels": 3,
+  "level0": {
+    "color_tint": "255:255:255:255",
+    "albedo_map_scale_bias": -1,
+    "normal_map_scale_bias": 255,
+    "uv_scale": [1.0, 1.0]
+  }
+}</code></pre>
+        </div>
+
+        <h3>Comparison:</h3>
+
+        <div class="slider-controls" data-slider="properties-slider">
+          <button class="slider-tab active" data-option="albedo">albedo_map_scale_bias</button>
+          <button class="slider-tab" data-option="normal">normal_map_scale_bias</button>
+          <button class="slider-tab" data-option="blend_map_channels">blend_map_channels</button>
+          <button class="slider-tab" data-option="color_tint">color_tint</button>
+          <button class="slider-tab" data-option="uv_scale">uv_scale</button>
+        </div>
+
+        <figure class="cd-image-container" id="properties-slider">
+          <div class="slider-option active" data-option="albedo">
+            <img src="../../assets/media/camos/properties_albedomap_scale_N1.png" alt="Albedo Map Scale N1" />
+            <div class="cd-resize-img">
+              <img src="../../assets/media/camos/properties_original_N1.png" alt="Original N1" />
+            </div>
+            <span class="cd-image-label" data-type="original">Before</span>
+            <span class="cd-image-label" data-type="modified">After</span>
+            <span class="cd-value-label">"albedo_map_scale_bias": -1</span>
+          </div>
+
+          <div class="slider-option" data-option="normal">
+            <img src="../../assets/media/camos/properties_normalmap_scale_N1.png" alt="Normal Map Scale N1" />
+            <div class="cd-resize-img">
+              <img src="../../assets/media/camos/properties_original_N1.png" alt="Original N1" />
+            </div>
+            <span class="cd-image-label" data-type="original">Before</span>
+            <span class="cd-image-label" data-type="modified">After</span>
+            <span class="cd-value-label">"normal_map_scale_bias": -1</span>
+          </div>
+
+          <div class="slider-option" data-option="blend_map_channels">
+            <img src="../../assets/media/camos/properties_blendmap_N1.png" alt="Blend Map Channels N1" />
+            <div class="cd-resize-img">
+              <img src="../../assets/media/camos/properties_original_N1.png" alt="Original N1" />
+            </div>
+            <span class="cd-image-label" data-type="original">Before</span>
+            <span class="cd-image-label" data-type="modified">After</span>
+            <span class="cd-value-label">"blend_map_channels": 7</span>
+          </div>
+
+          <div class="slider-option" data-option="color_tint">
+            <img src="../../assets/media/camos/properties_color_tint_N1.png" alt="Color Tint N1" />
+            <div class="cd-resize-img">
+              <img src="../../assets/media/camos/properties_original_N1.png" alt="Original N1" />
+            </div>
+            <span class="cd-image-label" data-type="original">Before</span>
+            <span class="cd-image-label" data-type="modified">After</span>
+            <span class="cd-value-label">"color_tint": "255:0:255:0"</span>
+          </div>
+
+          <div class="slider-option" data-option="uv_scale">
+            <img src="../../assets/media/camos/properties_UV_scale_N1.png" alt="UV Scale Offset N1" />
+            <div class="cd-resize-img">
+              <img src="../../assets/media/camos/properties_original_N1.png" alt="Original N1" />
+            </div>
+            <span class="cd-image-label" data-type="original">Before</span>
+            <span class="cd-image-label" data-type="modified">After</span>
+            <span class="cd-value-label">"uv_scale": [5, 5]</span>
+          </div>
+          <span class="cd-handle"></span>
+        </figure>
+
+        <h3>Animations:</h3>
+        <ul>
+          <li><strong>scroll</strong>: X-Y axis simple scroll</li>
+          <li><strong>pulse</strong>: changes camo scale over time [speed, min scale, max scale]</li>
+          <li><strong>color_cycle</strong>: rgb [speed, brightness]</li>
+        </ul>
+
+        <h4>Preset:</h4>
+        <div class="code-wrapper">
+          <pre><code>{
+  "level0": {
+    "scroll": [0.5, -0.2],
+    "pulse": [2.0, 0.8, 1.2],
+    "color_cycle": [0.5, 1.0]
+  }
+}</code></pre>
+        </div>
+
+        <h3>Comparison:</h3>
+
+        <div class="slider-controls" data-slider="animations-slider">
+          <button class="slider-tab active" data-option="scroll">scroll</button>
+          <button class="slider-tab" data-option="pulse">pulse</button>
+          <button class="slider-tab" data-option="color_cycle">color_cycle</button>
+        </div>
+
+        <figure class="cd-image-container" id="animations-slider">
+          <div class="slider-option active" data-option="scroll">
+            <img src="../../assets/images/placeholder.png" alt="Scroll Animation Placeholder" />
+            <div class="cd-resize-img">
+              <img src="../../assets/images/placeholder.png" alt="Original Placeholder" />
+            </div>
+            <span class="cd-image-label" data-type="original">Before</span>
+            <span class="cd-image-label" data-type="modified">After</span>
+          </div>
+
+          <div class="slider-option" data-option="pulse">
+            <img src="../../assets/images/placeholder.png" alt="Pulse Animation Placeholder" />
+            <div class="cd-resize-img">
+              <img src="../../assets/images/placeholder.png" alt="Original Placeholder" />
+            </div>
+            <span class="cd-image-label" data-type="original">Before</span>
+            <span class="cd-image-label" data-type="modified">After</span>
+          </div>
+
+          <div class="slider-option" data-option="color_cycle">
+            <img src="../../assets/images/placeholder.png" alt="Color Cycle Animation Placeholder" />
+            <div class="cd-resize-img">
+              <img src="../../assets/images/placeholder.png" alt="Original Placeholder" />
+            </div>
+            <span class="cd-image-label" data-type="original">Before</span>
+            <span class="cd-image-label" data-type="modified">After</span>
+          </div>
+          <span class="cd-handle"></span>
+        </figure>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>
