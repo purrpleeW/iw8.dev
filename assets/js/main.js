@@ -81,8 +81,8 @@ const DOCS_INDEX = [
   },
   {
     title: "Custom Camos",
-    path: "guides/customization/",
-    keywords: "customization camo image replacing custom textures weapons operators camo guides override dds png",
+    path: "guides/camos/",
+    keywords: "custom camo image png gif jpg jpeg properties animation images_reload",
     section: "Guides",
   },
   {
