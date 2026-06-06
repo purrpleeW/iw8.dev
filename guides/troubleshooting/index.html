@@ -89,7 +89,7 @@
           <li>Confirm that your system matches the mod and game requirements.</li>
           <li>Confirm you are using a supported game version.</li>
           <li>Be sure that your game is installed on a simple path (e.g. <code>C:\Games\ModernWarfare</code>).</li>
-          <li>Check that Python is installed (manual install only, not from Microsoft Store).</li>
+          <li>Be sure that you have Windows administrator permissions.</li>
           <li>Read any error messages or console output carefully.</li>
           <li>Be sure that you are not using any faulty script.</li>
           <li>Confirm you are connected to the Radmin VPN network if required.</li>
@@ -159,24 +159,19 @@
 
         <h2>Launcher and Download Issues</h2>
 
-        <p><strong>Error fetching JSON</strong></p>
-        <ul>
-          <li>Cause: Server traffic is too high</li>
-          <li>Fix: Try again later</li>
-        </ul>
-
-        <p><strong>Download button not visible</strong></p>
-        <ul>
-          <li>Wait until the launcher shows <code>Initialised file sizes from CDN</code></li>
-          <li>Wait another minute before starting the download</li>
-        </ul>
-
         <p><strong>General download issues</strong></p>
         <ul>
           <li>Try a different browser</li>
           <li>Use a download manager (eg. JDownloader 2)</li>
           <li>If your ISP is blocking the traffick, you need to use a VPN, Proxy, or DNS.</li>
           <li>If it persists, it might just be your connection or device</li>
+        </ul>
+
+        <p><strong>CDN/Server/Network error</strong></p>
+        <ul>
+          <li>Try again later</li>
+          <li>If your ISP is blocking the traffick, you need to use a VPN, Proxy, or DNS.</li>
+          <li>If it persists, download files from a different place (manual install).</li>
         </ul>
 
         <h2>Game-Specific Issues</h2>
@@ -197,9 +192,31 @@
           <li>Be sure that you are connected to the Radmin VPN network.</li>
         </ul>
 
+        <p><strong>The application was unable to start correctly.</strong></p>
+        <ul>
+          <li>Create an exclusion in your Antivirus for the game folder.</li>
+          <li>If that dosen't work, it means that your CPU is not compatible with AVX2, therefore, the mod.</li>
+        </ul>        
+
+        <h2>Game-Specific Issues (S4-Mod only)</h2>
+        <p><strong>Black frontend (menu background).</strong></p>
+        <ul>
+          <li>Run the command <code>openmenu mainmenuoffline</code>, press LOCAL MP, back out to the main menu, then go back into LOCAL MP.</li>
+        </ul>   
+
+        <p><strong>Can't change Zombies operators/watches.</strong></p>
+        <ul>
+          <li>Change those by going into an online menu.</li>
+        </ul>   
+
+        <p><strong>Shaders never finish loading, menus don't work.</strong></p>
+        <ul>
+          <li>Your game files are not compatible with the current version of the mod.</li>
+        </ul> 
+
         <h2>Uninstalling the Mod</h2>
         <ol>
-          <li>Delete all game-related files, the DLL files, as well as anything located in Documents.</li>
+          <li>Delete all game-related files, the DLL file, as well as anything located in Documents.</li>
           <li>Reboot your system</li>
         </ol>
 
