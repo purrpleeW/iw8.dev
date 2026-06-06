@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IW8-Mod Docs - Scripting</title>
+  <title>IW8-Mod Docs - FAQ</title>
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <link rel="icon" type="image/png" href="../../assets/images/iw8mod-icon.jpg" />
 </head>
@@ -51,9 +51,9 @@
               <span class="nav-chevron">⌄</span>
             </button>
             <div class="nav-group-links">
-              <a class="nav-link active" href="../../guides/scripting/">Scripting</a>
-              <a class="nav-link" href="../../guides/camos/">Custom Camos</a>
+              <a class="nav-link active" href="../../guides/faq/">FAQ</a>
               <a class="nav-link" href="../../guides/troubleshooting/">Troubleshooting</a>
+              <a class="nav-link" href="../../guides/camos/">Custom Camos</a>
             </div>
           </div>
         </nav>
@@ -77,20 +77,25 @@
       </header>
 
       <main class="content doc-page">
-        <p class="breadcrumb"><a href="../../">Home</a> / Guides / Scripting</p>
-        <h1>Scripting</h1>
+        <p class="breadcrumb"><a href="../../">Home</a> / Guides / FAQ</p>
+        <h1>FAQ</h1>
         <p>
-          IW8 GSC documentation goes here...
-        </p>
-
-        <h2>some topic ideas</h2>
-        <ul>
-          <li>script loading basics</li>
-          <li>simple use of GSC</li>
-          <li>menu creation</li>
-          <li>hudelem usage</li>
-          <li>debugging script issues</li>
-        </ul>
+          <h2>¿How to play with a controller?</h2>
+          The mods don't change how controllers work, so every game supports them natively.<br> Unless your controller chip wasn’t supported when the build was released (Usually DualSense)<br> in that case, look for a DS4 tutorial on the net.
+          <h2>¿How to play with friends?</h2>
+          Go to the <code>#lan-method</code> channel. Vanguard & Modern Warfare/Warzone (1.41.2/1.60.0/1.64.5) supported.
+          <h2>¿How do i open the console?</h2>
+          <h2>¿How do i change my username?</h2>
+          Use the command: <code>name <br> </code> (Lifix is the template, use the name that you want)
+          <h2>¿How can i see more camos?</h2>
+          You can see all the camouflages by pressing "Camo Swap" on the bottom of the camouflages menu.<br> You can also create custom ones with the docs in this site.
+        <h2>¿What is the best version?</h2>
+        You need to choose that by yourself 😊
+        <h2>¿How do i change my field of view?</h2>
+        You can change it on the game settings, or with <code>cg_fov</code> and a custom value (65-120)<br> for applying a multiplier to the current value use <code>cg_fovscale</code> and add a custom value (0,5 to 2)
+        <h2>¿How can i spawn in WZ with loadouts?</h2>
+        Use this command before match: <code>set scr_br_loadout_option standardammo;set scr_br_allowLoadout 1;set scr_br_use_set_loadouts 1;set scr_br_allowLoadoutOnlyInPreLobby 0</code><br> To disable this, invert all the numeric values from it.
+      </p>
       </main>
     </div>
   </div>

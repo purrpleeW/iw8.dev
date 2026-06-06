@@ -58,7 +58,7 @@ const DOCS_INDEX = [
   {
     title: "Features",
     path: "features/",
-    keywords: "features lan p2p offline scripting gsc bots versions launcher support custom mods",
+    keywords: "features lan p2p offline gsc scripting bots versions launcher support custom mods",
     section: "Overview",
   },
   {
@@ -74,15 +74,9 @@ const DOCS_INDEX = [
     section: "Installation",
   },
   {
-    title: "Scripting",
-    path: "guides/scripting/",
-    keywords: "scripting gsc iw8 script loading hud menu debugging",
-    section: "Guides",
-  },
-  {
-    title: "Custom Camos",
-    path: "guides/camos/",
-    keywords: "custom camo image png gif jpg jpeg properties animation images_reload",
+    title: "FAQ",
+    path: "guides/faq/",
+    keywords: "Frequent asked questions",
     section: "Guides",
   },
   {
@@ -91,6 +85,12 @@ const DOCS_INDEX = [
     keywords: "troubleshooting common problems missing files launch issues support",
     section: "Guides",
   },
+  {
+    title: "Custom Camos",
+    path: "guides/camos/",
+    keywords: "custom camo image png gif jpg jpeg properties animation images_reload",
+    section: "Guides",
+  }
 ];
 
 function getSiteRoot() {
